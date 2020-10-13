@@ -17,7 +17,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "babel-node ./service/index.js",
     "test": "jest"
   },
   "dependencies": {

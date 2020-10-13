@@ -1,5 +1,5 @@
 import PKG from './package.json';
-import Block from './src/blockchain/block';
+import Block from './blockchain/block';
 
 const { name, version, description, author } = PKG;
 const { genesis } = Block;
