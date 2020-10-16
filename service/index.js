@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import Blockchain from '../blockchain';
-import { restart } from 'nodemon'; //<----------------agregar esto
+import { restart } from 'nodemon'; 
 
 const { HTTP_PORT = 3000 } = process.env;
 
@@ -17,7 +17,6 @@ app.get('/blocks', (req, res) => {
 
 });
 
-//Esto fue lo nuevo**************<---------------------------------
 app.post('/mine', (req, res) => {
     const { body: { data } } = req;
     const block = blockchain.addBlock(data);
@@ -27,7 +26,6 @@ app.post('/mine', (req, res) => {
         block,
     });
 });
-//***************** <-------------------------------------------*/
 
 app.listen(HTTP_PORT, () => {
 
